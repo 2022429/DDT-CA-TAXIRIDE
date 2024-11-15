@@ -43,7 +43,7 @@ contract TaxiRide {
         rides[rideCount] = Ride(_location, _price); 
         emit RideAdded(rideCount, _location, _price);
 		// Increments ride count for the next unique ID
-        rideCount++; 
+          riderCount++;
     }
 
     // Function to book a ride, sending the required payment to the contract and ensure the rider id exists and rider details
