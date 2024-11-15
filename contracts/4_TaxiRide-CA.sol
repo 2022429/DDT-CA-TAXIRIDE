@@ -27,12 +27,11 @@ contract TaxiRide {
     event PaymentReceived(address passenger, uint amount); 
 
     // Modifier to restrict certain functions to the driver only
-    modifier onlyDriver() {
+        modifier onlyDriver() {
 	// Proceeds with the function if the caller is the driver
         require(msg.sender == driver, "Only the driver can perform this action.");
         _; 
-    }
-
+}
     // Constructor to set the contract deployer as the driver
     constructor() {
         driver = msg.sender;
