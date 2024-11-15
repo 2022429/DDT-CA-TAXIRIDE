@@ -39,6 +39,7 @@ contract TaxiRide {
     }
 
     // Function to add a new ride with location and price, callable only by the driver and store new ride details, log the ride details 
+
     function addRide(string memory _location, uint _price) public onlyDriver {
         rides[rideCount] = Ride(_location, _price); 
         emit RideAdded(rideCount, _location, _price);
