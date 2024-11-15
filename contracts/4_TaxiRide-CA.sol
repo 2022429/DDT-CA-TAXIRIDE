@@ -64,7 +64,7 @@ contract TaxiRide {
     function withdrawBalance() public onlyDriver {
 	// Gets the current balance available for withdrawal
         uint amount = driverBalance; 
-		// Resets the driver's balance after withdrawal
+	// Resets the driver's balance after withdrawal
         driverBalance = 0; 
 		// Transfers the balance to the driver
         payable(driver).transfer(amount); 
